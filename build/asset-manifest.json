@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.79bcdc47.css",
+    "main.js": "./static/js/main.c1d36802.js",
+    "static/media/about_pic.png": "./static/media/about_pic.a6edbc201487455019e9.png",
+    "static/media/gojo-image.png": "./static/media/gojo-image.92a512e6b145b5c53ff5.png",
+    "static/media/react.svg": "./static/media/react.6d4dd5dfc6163bdfcfe520bd6bef1a6a.svg",
+    "index.html": "./index.html",
+    "main.79bcdc47.css.map": "./static/css/main.79bcdc47.css.map",
+    "main.c1d36802.js.map": "./static/js/main.c1d36802.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79bcdc47.css",
+    "static/js/main.c1d36802.js"
+  ]
+}

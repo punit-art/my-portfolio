@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://punit-art.github.io/my-portfolio",
+  "homepage": ".",
+   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
