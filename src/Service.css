@@ -1,0 +1,170 @@
+.service-container {
+  background: linear-gradient(135deg, #0a0a2a 0%, #1e1e1e 30%, #111111 100%);
+  padding: 80px 20px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-container h2 {
+  color: #4da6ff;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(77, 166, 255, 0.8);
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.service-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #4da6ff, #1f3c88);
+  border-radius: 2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 hi thik hai*/
+  gap: 25px;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: rgba(20, 20, 40, 0.8);
+  color: #ffffff;
+  border: 1px solid rgba(77, 166, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  min-height: 100px;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(77, 166, 255, 0.25);
+  border-color: #4da6ff;
+}
+
+.card:hover::before {
+  height: 8px;
+  opacity: 1;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin: 20px 0 15px;
+  text-align: center;
+  color: #4da6ff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(77, 166, 255, 0.7);
+}
+
+.card p {
+  text-align: center;
+  line-height: 1.6;
+  color: #bfcfe7;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.card lord-icon {
+  transition: transform 0.3s ease;
+}
+
+.card:hover lord-icon {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-grid {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    min-height: 280px;
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    padding: 60px 15px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    min-height: 260px;
+    padding: 22px 15px;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+    margin: 15px 0 12px;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+
+  .service-container h2 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-container {
+    padding: 50px 10px;
+  }
+
+  .services-grid {
+    padding: 0 5px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+}

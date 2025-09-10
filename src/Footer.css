@@ -1,0 +1,101 @@
+footer {
+  background: linear-gradient(135deg, #050510 0%, #0a0a2a 40%, #1a1a40 100%);
+  color: #e0e8ff;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4da6ff, transparent);
+  animation: slide 4s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+footer div:first-child {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4da6ff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(77, 166, 255, 0.7),
+    0 0 24px rgba(77, 166, 255, 0.5);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer div:first-child:hover {
+  color: #66ccff;
+  transform: scale(1.05);
+}
+
+footer div:nth-child(2) {
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #b0c4ff;
+  opacity: 0.9;
+}
+
+footer div:last-child {
+  font-size: 0.9rem;
+  color: #8a9ccf;
+  margin-top: 0.8rem;
+  letter-spacing: 0.5px;
+}
+footer::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(77, 166, 255, 0.25) 0%, transparent 70%);
+  filter: blur(40px);
+  animation: pulse 5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.4;
+    transform: translateX(-50%) scale(1);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer div:first-child {
+    font-size: 1.4rem;
+  }
+
+  footer div:nth-child(2) {
+    font-size: 0.95rem;
+  }
+}
