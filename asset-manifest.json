@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.79bcdc47.css",
+    "main.js": "/my-portfolio/static/js/main.a13ec157.js",
+    "static/media/about_pic.png": "/my-portfolio/static/media/about_pic.a6edbc201487455019e9.png",
+    "static/media/gojo-image.png": "/my-portfolio/static/media/gojo-image.92a512e6b145b5c53ff5.png",
+    "static/media/react.svg": "/my-portfolio/static/media/react.6d4dd5dfc6163bdfcfe520bd6bef1a6a.svg",
+    "index.html": "/my-portfolio/index.html",
+    "main.79bcdc47.css.map": "/my-portfolio/static/css/main.79bcdc47.css.map",
+    "main.a13ec157.js.map": "/my-portfolio/static/js/main.a13ec157.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79bcdc47.css",
+    "static/js/main.a13ec157.js"
+  ]
+}
