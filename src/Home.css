@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Montserrat:wght@500;700&display=swap");
 .app {
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +27,8 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  pointer-events: none; /* allow clicks through */
+  overflow: hidden;
 }
 
 .floating-dot {
@@ -36,6 +38,7 @@
   background: #4da6ff;
   border-radius: 50%;
   opacity: 0.5;
+  will-change: transform, opacity;
 }
 
 .floating-dot:nth-child(odd) {
@@ -134,7 +137,7 @@
 
 .creative-text {
   font-size: 4.5rem;
-  font-weight: bold;
+  font-weight: 800; /* use the heavy Orbitron weight */
   text-transform: uppercase;
   letter-spacing: 4px;
   position: relative;
@@ -143,7 +146,10 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 20px;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Times New Roman", Times, serif;
+  width: min(95%, 1200px);
+  margin: 0 auto;
+  text-align: center;
 }
 
 .creative-letter {
@@ -159,13 +165,9 @@
   width: 100%;
 }
 
-
 .creative-letter.active {
   color: #4da6ff;
-  text-shadow: 
-    0 0 10px #4da6ff, 
-    0 0 20px #4da6ff, 
-    0 0 40px #4da6ff;
+  text-shadow: 0 0 10px #4da6ff, 0 0 20px #4da6ff, 0 0 40px #4da6ff;
   transform: translateY(-5px) scale(1.2);
 }
 
@@ -198,7 +200,7 @@
 
 .creative-tagline span {
   color: #a6e1ff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 500;
   font-size: 1.2rem;
   position: relative;
@@ -219,7 +221,8 @@
 }
 
 @keyframes tagline-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
     text-shadow: 0 0 5px rgba(166, 225, 255, 0.5);
   }
@@ -280,7 +283,7 @@
   padding: 12px 30px;
   border-radius: 30px;
   color: #0a0a2a;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
@@ -297,20 +300,20 @@
   .creative-text {
     font-size: 2.5rem;
   }
-  
+
   .creative-tagline {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .creative-progress {
     width: 300px;
   }
-  
+
   .portfolio h2 {
     font-size: 2rem;
   }
-  
+
   .portfolio p {
     font-size: 1rem;
   }

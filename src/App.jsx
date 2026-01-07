@@ -1,4 +1,3 @@
-import reactLogo from "./assets/react.svg";
 import Header from "./Header.jsx";
 import Main_page from "./Main_page.jsx";
 import Service from "./Service.jsx";

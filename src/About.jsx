@@ -58,7 +58,7 @@ export default function About() {
               </div>
               <div className="skill-item">Backend Basics & API Integration</div>
               <div className="skill-item">
-                Competitive Programming (450+ Leetcode problems solved)
+                Competitive Programming (650+ Leetcode problems solved)
               </div>
               <div className="skill-item">
                 Designing responsive, interactive, and creative websites
