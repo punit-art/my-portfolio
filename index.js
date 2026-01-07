@@ -46,6 +46,7 @@ app.post("/submit", async (req, res) => {
   }
 });
 
-app.listen(5001, () =>
-  console.log("✅ Server running on http://localhost:5001")
-);
+app.listen(process.env.PORT || 5001, () => {
+  console.log("Server running");
+});
+
