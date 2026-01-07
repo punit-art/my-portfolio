@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Home.css";
 
@@ -6,6 +6,19 @@ export default function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [currentLetter, setCurrentLetter] = useState(0);
   const name = ["PUNIT", "MUNDOTIYA"];
+
+  // random floating dots positions fixed for the session
+  const dots = useMemo(() =>
+    Array.from({ length: 50 }).map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      size: Math.floor(Math.random() * 6) + 3,
+      delay: Math.random() * 5,
+      duration: Math.random() * 10 + 8,
+      opacity: Math.random() * 0.6 + 0.2,
+    })),
+    []
+  );
 
 useEffect(() => {
   const totalLetters = name.reduce((acc, word) => acc + word.length, 0);
@@ -32,8 +45,20 @@ useEffect(() => {
             viewport={{ once: true }}
           >
             <div className="floating-dots">
-              {Array.from({ length: 50 }).map((_, i) => (
-                <div key={i} className="floating-dot"></div>
+              {dots.map((d, i) => (
+                <div
+                  key={i}
+                  className="floating-dot"
+                  style={{
+                    left: `${d.left}%`,
+                    top: `${d.top}%`,
+                    width: `${d.size}px`,
+                    height: `${d.size}px`,
+                    opacity: d.opacity,
+                    animationDelay: `${d.delay}s`,
+                    animationDuration: `${d.duration}s`,
+                  }}
+                />
               ))}
             </div>
             <div className="creative-text-container">

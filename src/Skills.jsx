@@ -100,7 +100,7 @@ export default function Skills() {
     {
       icon: <Icon icon={leetcodeIcon} />,
       name: "Problem Solving",
-      description: "450+ Questions • DSA • Algorithms",
+      description: "650+ Questions • DSA • Algorithms",
       level: "Advanced",
       color: "#FFA116",
     },

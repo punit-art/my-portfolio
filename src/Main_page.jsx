@@ -32,7 +32,7 @@ export default function Main_page() {
           <button
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1cjqdTmIC90xSUAr4jPJ_DPiWz9QQqE0Q/preview",
+                "https://drive.google.com/file/d/1Pop5DJFgR44VsS5ILByz7C_AMN8Qwczy/preview",
                 "_blank"
               );
             }}

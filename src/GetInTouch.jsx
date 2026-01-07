@@ -65,6 +65,7 @@ export default function ContactForm() {
 
     setIsSubmitting(true);
     setSubmitError("");
+
     try {
       const response = await fetch("http://localhost:5001/submit", {
         method: "POST",
@@ -82,15 +83,11 @@ export default function ContactForm() {
 
       setSent(true);
       setForm({ name: "", email: "", subject: "", message: "" });
-      
-      // Reset message after 3 seconds in our UI
-      setTimeout(() => {
-        setSent(false);
-      }, 3000);
-      
+
+      setTimeout(() => setSent(false), 3000);
     } catch (err) {
       console.error("Submission error:", err);
-      setSubmitError(err.message || "Server se connect nahi ho paya ");
+      setSubmitError(err.message || "Server se connect nahi ho paya");
     } finally {
       setIsSubmitting(false);
     }
