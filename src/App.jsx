@@ -5,6 +5,7 @@ import About from "./About.jsx";
 import Skills from "./Skills.jsx";
 import Contact from "./Contact.jsx";
 import Footer from "./Footer.jsx";
+import Projects from "./Projects.jsx";
 import "./App.css";
 import IntroSplash from "./Home.jsx";
 import React, { useState, useEffect } from "react";
@@ -40,6 +41,9 @@ export default function App() {
             </section>
             <section>
               <Skills />
+            </section>
+            <section>
+              <Projects />
             </section>
             <section>
               <Contact />

@@ -1,18 +1,18 @@
 import "./Main_page.css";
 import React from "react";
 import image from "./gojo-image.png";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import leetcodeIcon from "@iconify/icons-simple-icons/leetcode";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 export default function Main_page() {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  // const scrollTo = (id) => {
+  //   const el = document.getElementById(id);
+  //   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  // };
   return (
     <main id="home" className="main-container">
       <motion.div
@@ -32,7 +32,7 @@ export default function Main_page() {
           <button
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1Pop5DJFgR44VsS5ILByz7C_AMN8Qwczy/preview",
+                "https://drive.google.com/file/d/1Xm1pYskFSdqGiY70ULNOWwJ6jpyEIq3x/view",
                 "_blank"
               );
             }}
@@ -57,10 +57,10 @@ export default function Main_page() {
           <a href="https://www.linkedin.com/in/punit-mundotiya-621a84339/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
             <FontAwesomeIcon className="linkedin" icon={faLinkedin} />
           </a>
-          <a href="https://github.com/punit-art">
+          <a href="https://github.com/punit-28">
             <FontAwesomeIcon className="github" icon={faGithub} />
           </a>
-          <a href="https://leetcode.com/u/Punit___100">
+          <a href="https://leetcode.com/u/Punit_Mundotiya">
             <Icon className="linkedin" icon={leetcodeIcon} />
           </a>
         </div>

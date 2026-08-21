@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useEffect, useState } from "react";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,6 +66,7 @@ export default function Header() {
     { name: "About me", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
   const scrollTo = (id) => {

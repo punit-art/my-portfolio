@@ -9,7 +9,7 @@ export default function Footer() {
         Creating exceptional digital experiences through innovative web
         development and design.
       </div>
-      <div>© 2025 Punit Mundotiya. All rights reserved.</div>
+      <div>© {new Date().getFullYear()} Punit Mundotiya. All rights reserved.</div>
     </footer>
   );
 }
