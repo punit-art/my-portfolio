@@ -22,7 +22,7 @@ import { SiLeetcode } from "react-icons/si";
 export default function About() {
   const stats = [
     { value: "2+", label: "Years Experience", icon: <FaCode /> },
-    { value: "1000+", label: "LeetCode Solved", icon: <SiLeetcode /> },
+    { value: "1100+", label: "LeetCode Solved", icon: <SiLeetcode /> },
     { value: "5+", label: "Projects", icon: <FaRocket /> },
     { value: "3+", label: "Tech Stack", icon: <FaBrain /> },
   ];
